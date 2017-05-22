@@ -1,0 +1,13 @@
+<package>
+  <name> serial_communication_channels </name>
+  <version> 0.0.0 </version>
+  <description> TODO </description>
+
+  <maintainer email="heber.sobreira@gmail.com">heber </maintainer>
+  <license> TODO </license>
+  <url type="website">http://TODO </url>
+  <author email="heber.sobreira@gmail.com">heber </author>
+
+  <buildtool_depend> catkin </buildtool_depend>
+  
+</package>
