@@ -1,4 +1,4 @@
-#include "serial_communication_channels.h"
+#include "serial_communication_channels/serial_communication_channels.h"
 #include <stdlib.h>
 
 char ChannelDataToSendBuffer_[COMMUNICATION_CHANNELS_MAX_SIZE+1+1];//one for channel identification and another for /0

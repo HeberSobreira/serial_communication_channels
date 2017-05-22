@@ -4,11 +4,13 @@ project(serial_communication_channels)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+    roscpp
+    rospy
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -78,7 +80,7 @@ find_package(catkin REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES
-    serial_communication_channels
+    ${PROJECT_NAME}
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
@@ -89,15 +91,15 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-#include_directories(
-#    include
-#    ${catkin_INCLUDE_DIRS}
-#)
+include_directories(
+    include
+    ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a cpp library
-#add_library(serial_communication_channels
-#    src/serial_communication_channels.c
-#)
+add_library(${PROJECT_NAME}
+    src/serial_communication_channels.c
+)
 
 ## Declare a cpp executable
 #add_executable(serial_communication_channels src/serial_communication_channels.c)
@@ -107,7 +109,7 @@ catkin_package(
 # add_dependencies(empty_example_node empty_example_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(empty_example_node
+#target_link_libraries(serial_communication_channels
 #   ${catkin_LIBRARIES}
 # )
 
