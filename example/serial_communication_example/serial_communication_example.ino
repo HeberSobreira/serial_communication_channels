@@ -4,7 +4,7 @@
 
 #define SerialSuperVisor Serial
 
-#include "edgar_arm_communications.h"
+#include "serial_communications_example.h"
 
 TDataCommunicationsChannels *DataComm;
 int led = 13;
@@ -14,10 +14,10 @@ unsigned long start_time1;
 
 void setup() {
   pinMode(led, OUTPUT);
-  SerialSuperVisor.begin(115200);
+  SerialSuperVisor.begin(9600);
   start_time = millis();
   start_time1 = millis();
-  DataComm=InitEdgarArmCommunications();
+  DataComm=InitExampleCommunications();
   
   DataComm->dataTest2=-1234;
   DataComm->dataTest3=-12.34;

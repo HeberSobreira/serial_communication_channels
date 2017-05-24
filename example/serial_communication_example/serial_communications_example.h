@@ -15,7 +15,7 @@ typedef struct structDataCommunicationsChannels
     float dataTest3;
 }TDataCommunicationsChannels;
 
-TDataCommunicationsChannels* InitEdgarArmCommunications();
+TDataCommunicationsChannels* InitExampleCommunications();
 
 #ifdef __cplusplus
 }
